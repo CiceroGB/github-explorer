@@ -4,10 +4,12 @@ import { GlobalStyle } from "./styles/global";
 
 export function App() {
   return (
-    <BrowserRouter>
-      <Routes />
-      <GlobalStyle/>
-    </BrowserRouter>
+    <>
+      <BrowserRouter>
+        <Routes />
+      </BrowserRouter>
+      <GlobalStyle />
+    </>
 
 
   );

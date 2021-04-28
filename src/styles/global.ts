@@ -27,7 +27,7 @@ body {
 }
 
 body, input, textarea, button {
-    font-family:   sans-serif;
+    font-family: 'Roboto',  sans-serif;
     font-weight: 400;
 }
 
@@ -43,5 +43,11 @@ button {
     opacity: 0.6;
     cursor: not-allowed;
 }
+
+#root {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2.5rem 1.25rem;
+  }
 
 `

@@ -1,8 +1,10 @@
-
+import { Title } from './styles';
 
 export function Dashboard() {
     return (
-        <h1>Dasboard</h1>
+        <Title>
+            Explore Github Repositories
+        </Title>
     )
 }
 
