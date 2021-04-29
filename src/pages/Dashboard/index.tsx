@@ -1,5 +1,6 @@
 import { useEffect, useState, FormEvent } from 'react';
 import { FiChevronRight } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 import logoImg from '../../assets/logo.svg';
 import api from '../../services/api';
 
@@ -20,22 +21,22 @@ export function Dashboard() {
     const [inputError, setInputError] = useState('');
     const [repositories, setRepositories] = useState<Repository[]>(() => {
         const storageRepositories = localStorage.getItem(
-          '@GithubExplorer:repositories',
+            '@GithubExplorer:repositories',
         );
-    
+
         if (storageRepositories) {
-          return JSON.parse(storageRepositories);
+            return JSON.parse(storageRepositories);
         }
         return [];
-      });
+    });
 
 
     useEffect(() => {
         localStorage.setItem(
-          '@GithubExplorer:repositories',
-          JSON.stringify(repositories),
+            '@GithubExplorer:repositories',
+            JSON.stringify(repositories),
         );
-      }, [repositories]);
+    }, [repositories]);
 
 
     async function handleAddRepository(event: FormEvent<HTMLFormElement>): Promise<void> {
@@ -79,7 +80,7 @@ export function Dashboard() {
 
             <Repositories>
                 {repositories.map(repository => (
-                    <a key={repository.id} href="test">
+                    <Link key={repository.id} to={`/repositories/${repository.full_name}`}>
                         <img src={repository.owner.avatar_url}
                             alt={repository.owner.login} />
                         <div>
@@ -87,7 +88,7 @@ export function Dashboard() {
                             <p>{repository.description}</p>
                         </div>
                         <FiChevronRight size={20} />
-                    </a>
+                    </Link>
                 ))}
 
             </Repositories>
