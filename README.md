@@ -5,7 +5,7 @@
   Github explorer apllication.
 </h4>
 
-<img width="1438" alt="nlw fim" src="https://user-images.githubusercontent.com/63745509/116010217-0afeb500-a5f4-11eb-8743-d5edafbb6a48.gif">
+<img width="1438" alt="Git Explorer" src="https://user-images.githubusercontent.com/63745509/116600629-e2323480-a8ff-11eb-9d56-1e055da01314.gif">
 
 Developed on the Ignite course by [Rocketseat](https://rocketseat.com.br/)
 
